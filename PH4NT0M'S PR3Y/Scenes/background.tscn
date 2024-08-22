@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt6dxuglrjxci"]
+
+[ext_resource type="Texture2D" uid="uid://cps6uujfxfe4g" path="res://Assets/Ph4nt0m5_Pr3y_Title_screen.png" id="1_vvhc5"]
+
+[node name="Background" type="TextureRect"]
+show_behind_parent = true
+texture_repeat = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.03011, 1.04851)
+texture = ExtResource("1_vvhc5")
+
+[node name="Foreground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]

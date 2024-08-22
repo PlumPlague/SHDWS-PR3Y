@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch0p44k75fdkf"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_hsi3x"]
+[ext_resource type="Texture2D" uid="uid://dxyouhu4kjmwy" path="res://Assets/icon.svg" id="2_7h875"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1b7me"]
+size = Vector2(128, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eybue"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7h875")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7h875")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7h875")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7h875")
+}],
+"loop": true,
+"name": &"throw",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7h875")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(160, 384)
+script = ExtResource("1_hsi3x")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_1b7me")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.471191, 0.993652)
+sprite_frames = SubResource("SpriteFrames_eybue")
+animation = &"idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.9, 0.9)

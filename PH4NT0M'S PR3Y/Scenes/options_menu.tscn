@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr0b8xkoil07f"]
+
+[ext_resource type="FontFile" uid="uid://3lunp1mikw73" path="res://Assets/Fonts/home-video-font/HomeVideo-BLG6G.ttf" id="1_8h3h3"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -48
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("1_8h3h3")
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1

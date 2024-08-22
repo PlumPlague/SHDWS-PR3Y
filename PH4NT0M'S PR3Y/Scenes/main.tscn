@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqno35xt33jm8"]
+
+[ext_resource type="PackedScene" uid="uid://ch0p44k75fdkf" path="res://Scenes/player.tscn" id="1_xe2wd"]
+[ext_resource type="PackedScene" uid="uid://tcbi5vs8lkl" path="res://Scenes/platform.tscn" id="2_0h2j2"]
+[ext_resource type="PackedScene" uid="uid://dt6dxuglrjxci" path="res://Scenes/background.tscn" id="3_6q861"]
+
+[node name="Main" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_xe2wd")]
+
+[node name="Background" parent="Player" instance=ExtResource("3_6q861")]
+offset_left = -160.0
+offset_top = -384.0
+offset_right = 992.0
+offset_bottom = 264.0
+
+[node name="Platform" parent="." instance=ExtResource("2_0h2j2")]
+position = Vector2(-4, 627)
+scale = Vector2(4.48254, -0.933991)
+
+[node name="Platform2" parent="." instance=ExtResource("2_0h2j2")]
+position = Vector2(-7, 8)
+scale = Vector2(4.53215, 0.79173)
+
+[node name="Platform3" parent="." instance=ExtResource("2_0h2j2")]
+position = Vector2(-86, 570)
+scale = Vector2(0.364252, -8.78992)
+
+[node name="Platform4" parent="." instance=ExtResource("2_0h2j2")]
+position = Vector2(1098, 356)
+scale = Vector2(0.229511, -5.38104)

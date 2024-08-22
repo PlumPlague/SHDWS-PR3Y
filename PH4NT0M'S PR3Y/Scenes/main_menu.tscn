@@ -1,0 +1,138 @@
+[gd_scene load_steps=7 format=3 uid="uid://bbyh2d8xqngsk"]
+
+[ext_resource type="Script" path="res://Scenes/main_menu.gd" id="1_1w6ep"]
+[ext_resource type="Texture2D" uid="uid://cps6uujfxfe4g" path="res://Assets/Ph4nt0m5_Pr3y_Title_screen.png" id="1_ulfq2"]
+[ext_resource type="FontFile" uid="uid://dd3nrmegncrbr" path="res://Assets/Fonts/home-video-font/HomeVideoBold-R90Dv.ttf" id="2_sw2ui"]
+[ext_resource type="AudioStream" uid="uid://drfyj6ugw07vv" path="res://Assets/Music/Phantom's Prey Title.wav" id="4_csciu"]
+
+[sub_resource type="Curve" id="Curve_1xgm7"]
+_data = [Vector2(0.412088, 0.032967), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveTexture" id="CurveTexture_gaj48"]
+curve = SubResource("Curve_1xgm7")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1w6ep")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CurveTexture_gaj48")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Ph4Nt0m5Pr3yTitleScreen" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+position = Vector2(556, 164)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_ulfq2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Separator" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.0823529, 0.529412, 0.305882, 1)
+theme_override_colors/font_pressed_color = Color(0.65098, 0.0588235, 0.00784314, 1)
+theme_override_colors/font_hover_color = Color(0.662745, 0.184314, 0.0784314, 1)
+theme_override_colors/font_focus_color = Color(0.65098, 0.0588235, 0.00784314, 1)
+theme_override_colors/font_disabled_color = Color(0.0823529, 0.529412, 0.305882, 1)
+theme_override_colors/font_outline_color = Color(0.65098, 0.0588235, 0.00784314, 1)
+theme_override_colors/icon_normal_color = Color(0.662745, 0.184314, 0.0784314, 1)
+theme_override_colors/icon_focus_color = Color(0.67451, 0.12549, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("2_sw2ui")
+theme_override_font_sizes/font_size = 48
+text = "Pl4y"
+
+[node name="SettingsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.0823529, 0.529412, 0.305882, 1)
+theme_override_colors/font_pressed_color = Color(0.65098, 0.0588235, 0.00784314, 1)
+theme_override_colors/font_hover_color = Color(0.662745, 0.184314, 0.0784314, 1)
+theme_override_colors/font_focus_color = Color(0.65098, 0.0588235, 0.00784314, 1)
+theme_override_colors/font_disabled_color = Color(0.0823529, 0.529412, 0.305882, 1)
+theme_override_colors/font_outline_color = Color(0.65098, 0.0588235, 0.00784314, 1)
+theme_override_colors/icon_normal_color = Color(0.662745, 0.184314, 0.0784314, 1)
+theme_override_colors/icon_focus_color = Color(0.67451, 0.12549, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("2_sw2ui")
+theme_override_font_sizes/font_size = 48
+text = "S3tting5"
+
+[node name="CreditsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.0823529, 0.529412, 0.305882, 1)
+theme_override_colors/font_pressed_color = Color(0.65098, 0.0588235, 0.00784314, 1)
+theme_override_colors/font_hover_color = Color(0.662745, 0.184314, 0.0784314, 1)
+theme_override_colors/font_focus_color = Color(0.65098, 0.0588235, 0.00784314, 1)
+theme_override_colors/font_disabled_color = Color(0.0823529, 0.529412, 0.305882, 1)
+theme_override_colors/font_outline_color = Color(0.65098, 0.0588235, 0.00784314, 1)
+theme_override_colors/icon_normal_color = Color(0.662745, 0.184314, 0.0784314, 1)
+theme_override_colors/icon_focus_color = Color(0.67451, 0.12549, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("2_sw2ui")
+theme_override_font_sizes/font_size = 48
+text = "Cr3dit5"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.0823529, 0.529412, 0.305882, 1)
+theme_override_colors/font_pressed_color = Color(0.65098, 0.0588235, 0.00784314, 1)
+theme_override_colors/font_hover_color = Color(0.662745, 0.184314, 0.0784314, 1)
+theme_override_colors/font_focus_color = Color(0.65098, 0.0588235, 0.00784314, 1)
+theme_override_colors/font_disabled_color = Color(0.0823529, 0.529412, 0.305882, 1)
+theme_override_colors/font_outline_color = Color(0.65098, 0.0588235, 0.00784314, 1)
+theme_override_colors/icon_normal_color = Color(0.662745, 0.184314, 0.0784314, 1)
+theme_override_colors/icon_focus_color = Color(0.67451, 0.12549, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("2_sw2ui")
+theme_override_font_sizes/font_size = 48
+text = "T3rmin4te"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_csciu")
+autoplay = true
